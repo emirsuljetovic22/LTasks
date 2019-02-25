@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body
+{
+padding:0;
+margin:0;
+font-family: 'Roboto', sans-serif;
+}
+.three-columns {
+    width: 100%;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+/* Since the column widths are specified for 1024px breakpoints and less, I will go forward and set equal column widths for larger screens */
+.column-1, .column-2, .column-3 {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 33.33%;
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+}
+.column-1 {
+    background-color: aliceblue;
+    left: 0px;
+}
+.column-2 {
+    background-color: antiquewhite;
+}
+.column-3 {
+    background-color: aquamarine;
+    right: 0px;
+}
+@media all and (max-width: 1024px) {
+    .column-1, .column-2, .column-3 {
+        position: absolute;
+    }
+    .column-1 {
+        width: 180px;
+        left: 0px;
+    }
+    .column-2 {
+        width: auto;
+        left: 180px;
+        right: 200px;
+    }
+    .column-3 {
+        width: 200px;
+        right: 0px;
+    }
+}
+@media all and (max-width: 768px) {
+    .column-1, .column-2, .column-3 {
+        position: inherit;
+        width: 33.33%;
+    }
+}
+@media all and (max-width: 320px) {
+    .column-1, .column-2, .column-3 {
+        position: inherit;
+        width: 100%;
+    }
+}

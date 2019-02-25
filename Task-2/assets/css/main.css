@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+.content-area {
+	text-align: center;
+	margin-top: 50px;
+}
+
+ul li a:focus+ul li ul {
+	display: block !important;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	background: #2196F3;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	width: 250px;
+}
+
+.nav-inner {
+	height: 100%;
+	margin-top: 0px;
+	padding-top: 50px;
+}
+
+li {
+	max-width: 250px;
+	color: #fff;
+	background: #2196F3;
+	display: block;
+	padding: 1rem;
+	position: relative;
+	text-decoration: none;
+	transition-duration: 0.5s;
+}
+
+li a {
+	color: #fff;
+}
+
+li:hover {
+	background: rgb(255, 72, 0);
+	cursor: pointer;
+}
+
+li:focus-within {
+	background: rgb(255, 72, 0);
+	cursor: pointer;
+}
+
+li:focus-within a {
+	outline: none;
+}
+
+.submenu {
+	background: #2196F3;
+	visibility: hidden;
+	opacity: 0;
+	max-width: 250px;
+	position: absolute;
+	transition: all 0.5s ease;
+	margin-left: 250px;
+	margin-top: -35px;
+	left: 0;
+	z-index: 1;
+	display: none;
+}
+
+.trigger-submenu:focus+.dropdown,
+.dropdown-item {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+}
+
+.dropdown-item:focus+ul li ul {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+}
+
+.menu {
+	position: absolute;
+	left: 0;
+	z-index: 2;
+	height: 100%;
+	top: 0;
+}
+
+.submenu {
+	position: absolute;
+	left: 0;
+	z-index: 1;
+}
+
+ul li:focus-within>ul {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+}
+
+ul li:hover>ul,
+ul li ul:hover,
+ul li ul:focus {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+}
+
+ul li ul li {
+	clear: both;
+	width: 100%;
+}

@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+.content-area {
+	text-align: center;
+}
+
+ul li a:focus+ul li ul {
+	display: block !important;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	background: #2196F3;
+	list-style: none;
+	display: flex;
+	width: 100%;
+	align-content: center;
+	justify-content: center;
+	margin-top: 0px;
+}
+
+li {
+	color: #fff;
+	background: #2196F3;
+	display: inline-block;
+	padding: 1rem;
+	text-decoration: none;
+	transition-duration: 0.5s;
+	cursor: pointer;
+}
+
+li a {
+	color: #fff;
+}
+
+li:hover {
+	background: rgb(255, 72, 0);
+	cursor: pointer;
+}
+
+li:focus-within {
+	background: rgb(255, 72, 0);
+	cursor: pointer;
+}
+
+li:focus-within a {
+	outline: none;
+}
+
+.submenu {
+	background: #2196F3;
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	transition: all 0.5s ease;
+	z-index: 1;
+	display: none;
+	margin-left: -16px;
+	margin-top: 16px;
+	padding-left: 0px;
+}
+
+.trigger-submenu:focus+.dropdown,
+.dropdown-item {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+}
+
+.dropdown-item:focus+ul li ul {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+}
+
+ul li:focus-within>ul {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+}
+
+ul li:hover>ul,
+ul li ul:hover,
+ul li ul:focus {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+}
+
+ul li ul {
+	width: 250px;
+}
+
+ul li ul li {
+	clear: both;
+	width: 250px;
+	display: block;
+}
+
+
+/* Hamburger icon css */
+
+.burger-container {
+	display: inline-block;
+	cursor: pointer;
+	position: absolute;
+	left: 50px;
+	top: 6px;
+	visibility: hidden;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: #fff;
+	margin: 6px 0;
+	transition: transform .5s ease;
+}
+
+#menu {
+	transition: left .5s ease;
+}
+
+#content-area {
+	transition: margin-left .5s ease;
+}
+
+.bar1-transformed {
+	transform: rotate(43deg);
+	margin: 18px 0px 0px 0px;
+}
+
+.bar2-transformed {
+	transform: rotate(-43deg);
+	margin: -4px 0px 0px 0px;
+}
+
+.bar3-transformed {
+	display: none;
+}
+
+@media all and (max-width: 768px) {
+	.burger-container {
+		visibility: visible;
+		position: fixed;
+	}
+	.burger-menu-background {
+		width: 100%;
+		height: 50px;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		background-color: #2196F3;
+	}
+	.menu {
+		position: absolute;
+		left: -250px;
+		top: 0px;
+	}
+	.submenu {
+		margin-left: -50px;
+		margin-bottom: -22px;
+		position: unset;
+	}
+	.content-area {
+		margin-top: 70px;
+		text-align: center;
+	}
+	ul {
+		display: block;
+		width: 250px;
+		padding-left: 0px;
+		margin-top: 0px;
+		height: 100vh;
+		padding-top: 100px;
+	}
+	li {
+		display: block;
+		padding-left: 50px;
+	}
+	ul li ul {
+		padding-top: 0px;
+		height: auto;
+		width: 200px;
+	}
+	ul li ul li {
+		padding-left: 77px;
+		width: 157px;
+	}
+}

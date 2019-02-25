@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Task 2 - Accessible menu demo</title>
+    <meta name="description" content="Task 2 - Accessible menu demo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Chrome, Firefox and Opera allows us to change the browser's color (ex. browse bar) by using the following property, however, not going to use it for this task.
+         <meta name="theme-color" content="#fafafa"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+      <![endif]-->
+    <nav class="menu">
+        <ul class="nav-inner">
+            <li role="presentation"><a href="#" role="menuitem">Home</a></li>
+            <li role="presentation">
+                <a href="#" class="trigger-submenu" id="focus" role="menuitem" aria-label="More info, submenu - 5 submenu items">More info</a>
+                <ul class="submenu">
+                    <li role="presentation"><a href="#" role="menuitem">Submenu one</a></li>
+                    <li role="presentation"><a href="#" role="menuitem">Submenu two</a></li>
+                    <li role="presentation"><a href="#" role="menuitem">Submenu three</a></li>
+                    <li role="presentation"><a href="#" role="menuitem">Submenu four</a></li>
+                    <li role="presentation"><a href="#" role="menuitem">Submenu five</a></li>
+                </ul>
+            </li>
+            <li role="presentation"><a href="#" role="menuitem">About</a></li>
+            <li role="presentation"><a href="#" role="menuitem">Blog</a></li>
+            <li role="presentation"><a href="#" role="menuitem">Demo</a></li>
+        </ul>
+    </nav>
+    <section aria-labelledby="contentregion" class="content-area">
+        <h2 id="contentregion">Content title</h2>
+        <p>Some more content</p>
+    </section>
+</body>
+
+</html>
